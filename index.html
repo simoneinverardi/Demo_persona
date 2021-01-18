@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Sense | Webapp </title>
+  <!-- links and scripts after this three tags, that are the most important for parsing html DOM -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="font.css">
+  <!-- scripts can be placed either in the head or at the bottom of the body. The defer keyword lets the browser start downloading all the scripts but executes them only after the DOM has been parsed (so after the body is loaded-->
+  <script src="tf-core.min.js" defer></script>
+  <script src="tf-converter.min.js" defer></script>
+  <script src="facemesh.min.js" defer></script>
+  <script src="landmarks.js" defer></script>
+  <script src="face-api.min.js" defer></script>
+  <script src="p5.js" defer></script>
+  <script src="p5.sound.min.js" defer></script>
+  <!-- your scripts goes at the end because the browser first needs to parse the library scripts -->
+  <script src="sketch.js" defer></script>
+  <script src="particle.js" defer></script>
+</head>
+<body>
+
+  <!-- chiamata -->
+
+  <div id="loadingPage">
+
+    <div id="loadElements"> <img class="loadingLogo" src="assets/logopersona_sense_blu.svg">
+      <div class="progress0">
+        <div class="progressValue0"></div>
+      </div>
+      <h1 id="textLoad"> </h1>
+    </div>
+
+  </div>
+
+  <header>
+    <div class="sinistra">
+      <img class="sense2" src="assets/logopersona.svg">
+    </div>
+
+    <h1 id="names"> Guest & User </h1>
+    <div class="destra">
+      <a id="esci" href=#> Esci </a>
+    </div>
+
+  </header>
+
+  <div class="progress">
+    <div class="progressValue"></div>
+  </div>
+
+  <main>
+
+    <div id="allContainer">
+
+      <div id="left">
+
+        <div id="video-container"></div>
+
+        <div id="dataUsers">
+
+          <div id="copriData">
+           <h1 id="demoText"> Per la visualizzazione ed analisi dei dati <br>
+                è necessario il kit Persona </h1>
+          </div>
+
+          <div id="user1Container">
+            <img id="photo3">
+          </div>
+
+          <div id="user2Container">
+            <img id="photoUser2">
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="mask-container"> </div>
+    </div>
+
+
+  </main>
+
+</body>
+</html>
