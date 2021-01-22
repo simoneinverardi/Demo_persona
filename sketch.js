@@ -254,8 +254,8 @@ function setup() {
 
   // caricamento modelli libreria face.api (emotion recognition), quando sono caricati, inizia a leggere le emozioni
   Promise.all([
-    faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
-    faceapi.nets.faceExpressionNet.loadFromUri('/models')
+    faceapi.nets.tinyFaceDetector.loadFromUri('./models'),
+    faceapi.nets.faceExpressionNet.loadFromUri('./models')
   ]).then(startEmotionTracking);
 
   // this is to make sure the capture is loaded before asking facemesh to take a look
